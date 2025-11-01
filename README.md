@@ -55,11 +55,10 @@ DONE!
 
 ## 📂 STRUCTURE
 
-| Directory              | Purpose                                                                 |
-| ---------------------- | ----------------------------------------------------------------------- |
-| `/assets/css/`         | CSS layers for layout, typography, heuristics                           |
-| `/assets/images/`      | Brand and application image assets                                      |
-| `index.html`           | Main application entry point                                            |
+| Directory       | Purpose                                       |
+| --------------- | --------------------------------------------- |
+| `/assets/css/`  | CSS layers for layout, typography, heuristics |
+| `index.html`    | Main application entry point                  |
 
 <br>
 
