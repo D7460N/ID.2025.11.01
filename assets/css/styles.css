@@ -6,28 +6,12 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
-  transition-property: var(--transition-property);
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
-  transition-behavior: allow-discrete;
-
-  /* Accessibility feature */
-  @media (prefers-reduced-motion: reduce) {
-    transition-duration: 0ms;
-  }
 }
 
 :root {
   color-scheme: light dark;
   /* font: [font-style] [font-variant] [font-weight] [font-stretch] <font-size> [/ <line-height>] <font-family>; */
   font: normal normal 100 1rem/1.5 Oxanium, sans-serif;
-
-  --transition-duration: 250ms;
-  --transition-property: visibility, opacity, display, transform, background,
-    background-color, border-color, color, width, height, min-width,
-    min-height border;
-  --transition-timing-function: ease-in;
 
   scroll-behavior: smooth;
 
@@ -146,8 +130,6 @@ section {
 section {
   scrollbar-width: thin;
   scrollbar-color: rgb(var(--accent2)) #0000;
-
-  transition: scrollbar-color 0.5s ease;
 
   &:not(:hover) {
     scrollbar-color: transparent #0000;
