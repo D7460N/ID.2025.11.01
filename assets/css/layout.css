@@ -1,37 +1,93 @@
 /* MARK: LAYOUT
+
+NOTES:
+  overflow: hidden;
+    - Optional full screen/full bleed layouts
+    - Disables horizontal scrolling (enforces accessible wrapping)
+    - Enables closest context scrolling
+    - Eliminates unknown variables
+
+  Padding and Margin:
+    - Data elements/containers only. Such as <h1>, <p>, <label>, <input>, etc.
+    - Not for layout containers. Such as <html>, <body>, <header>, <main>, etc.
+    - Less complex for dynamic content
+    - Allows browsers intrinsic control of data elements along with infered grid layout 
 */
 
-:where(app-container, app-banner, header, nav, main, article, section, ul, aside, footer) {
+:root {
+  
+}
+
+:where(
+  html,
+  body,
+  app-container,
+  main,
+  article
+) {
+  overflow: hidden;
+  position: relative;
+}
+
+:where(
+  app-container,
+  app-banner,
+  header,
+  nav,
+  main,
+  article,
+  section,
+  ul,
+  li,
+  form,
+  legend,
+  aside,
+  footer
+) {
   display: grid;
 }
 
-:where(html, body, app-container, main, article) {
-  overflow: hidden;
-}
-
-section {
-  overflow-y: auto;
-}
-
-:where(app-banner, header, nav, main, aside, footer) {
-  border: solid 1px color-mix(in srgb, currentColor var(--45), transparent);
+:where(
+  app-banner,
+  header,
+  nav,
+  main,
+  aside,
+  footer
+) {
   border-radius: 0.3rem;
   margin-inline: 1rem;
 }
 
-:where(app-logo, user-name, h1, h2, p, li, powered-by, app-version) {
+:where(
+  app-container,
+  main,
+  article,
+  section,
+  ul
+) {
+  grid-auto-flow: row;
+}
+
+:where(
+  app-logo,
+  user-name,
+  h1,
+  h2,
+  p,
+  li,
+  powered-by,
+  app-version
+) {
   padding: 1rem;
 }
 
 app-container {
+  grid-auto-flow: row;
   container-type: inline-size;
   container-name: app-container;
   gap: 1rem;
   height: 100dvh;
-}
-
-app-banner {
-  justify-content: center;
 }
 
 header,
@@ -42,6 +98,7 @@ footer {
 
 app-banner {
   grid-auto-flow: column;
+  justify-content: center;
   color: color-mix(in srgb, currentColor var(--45), transparent);
   font-size: 75%;
 
@@ -65,11 +122,23 @@ nav {
 }
 
 article {
+  grid-auto-flow: row;
   height: 100dvh;
   align-content: start;
 }
 
-li {
+summary { cursor: pointer; padding: .5rem 1rem; }
+
+header ul {
+  list-style: none; padding: 0; margin: 0; 
+}
+
+header li { margin-block: .25rem; }
+header li {
   padding-inline: 1rem;
   padding-block: 0.5rem;
+}
+
+section {
+  overflow-y: auto;
 }
