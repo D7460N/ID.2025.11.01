@@ -102,11 +102,13 @@ header,
 footer {
   grid-auto-flow: column;
   justify-content: space-between;
+  user-select: none;
 }
 
 app-banner {
   grid-auto-flow: column;
   justify-content: center;
+  user-select: none;
   color: color-mix(in srgb, currentColor var(--45), transparent);
   font-size: 75%;
 
@@ -122,8 +124,9 @@ app-banner {
 nav {
   grid-auto-flow: column;
   justify-content: start;
+  user-select: none;
 
-  [role="button"] {
+  &[role="button"] {
     padding-inline: 1rem;
     padding-block: 0.5rem;
   }
