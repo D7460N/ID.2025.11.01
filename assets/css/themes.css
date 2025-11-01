@@ -1,0 +1,96 @@
+/* MARK: THEMES
+*/
+
+:root {
+  color-scheme: light dark;
+
+  /* default scheme & brand */
+  --scheme-bg-light: oklch(100% 0 0); /* white */
+  --scheme-bg-dark:  oklch(20% 0.01 250); /* near-black neutral */
+
+  /* default brand accent (blue) */
+  --accent: oklch(55% 0.15 250);
+  accent-color: var(--accent);
+
+  background-color: var(--scheme-bg-dark);
+  color: oklch(97% 0.02 250);
+}
+
+/* --- BRAND SELECTION --- */
+:root:has([name=brand][value="blue"]:checked)    { --accent: oklch(55% 0.15 250); } /* #005A9C */
+:root:has([name=brand][value="teal"]:checked)    { --accent: oklch(50% 0.12 180); } /* #006D5B */
+:root:has([name=brand][value="rose"]:checked)    { --accent: oklch(56% 0.14 340); } /* #A63E6C */
+:root:has([name=brand][value="amber"]:checked)   { --accent: oklch(63% 0.15 75);  } /* #9A5E0C */
+:root:has([name=brand][value="charcoal"]:checked){ --accent: oklch(35% 0.02 260); } /* #4C4C4C */
+
+/* --- COLOR-SCHEME TOGGLE --- */
+:root:has([name=scheme][value="light"]:checked) {
+  color-scheme: light;
+  background-color: var(--scheme-bg-light);
+  color: oklch(20% 0.01 250);
+}
+
+:root:has([name=scheme][value="dark"]:checked) {
+  color-scheme: dark;
+  background-color: var(--scheme-bg-dark);
+  color: oklch(97% 0.02 250);
+}
+
+/* “Auto” = respects user system preference */
+@media (prefers-color-scheme: light) {
+  :root:has([name=scheme][value="auto"]:checked) {
+    color-scheme: light;
+    background-color: var(--scheme-bg-light);
+    color: oklch(20% 0.01 250);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:has([name=scheme][value="auto"]:checked) {
+    color-scheme: dark;
+    background-color: var(--scheme-bg-dark);
+    color: oklch(97% 0.02 250);
+  }
+}
+
+/* --- GLOBAL CONSUMERS --- */
+section {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+/* --- STRUCTURAL POLISH --- */
+header label { display: inline-flex; gap: .5rem; align-items: center; }
+
+:where(
+  input,
+  select,
+  textarea,
+  button,
+  progress,
+  meter,
+  ::file-selector-button
+) {
+  accent-color: var(--accent);
+}
+
+:where(
+  app-banner,
+  header,
+  nav,
+  main,
+  aside,
+  footer
+) {
+  border: solid 1px color-mix(in srgb, currentColor var(--45), transparent);
+}
+
+/* MARK: TECH CORNERS
+*/
+section [role="button"] {
+  border: solid 0.065rem color-mix(in srgb, currentColor var(--45), transparent);
+  color: inherit;
+  background-color: transparent;
+  mask: conic-gradient(currentColor 0 0) padding-box,
+    conic-gradient(at 0.5rem 0.5rem, transparent 75%, currentcolor 0%) 0 0 /
+      calc(100% - 0.5rem) calc(100% - 0.5rem) border-box;
+}
