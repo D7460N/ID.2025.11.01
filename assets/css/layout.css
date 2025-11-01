@@ -9,6 +9,10 @@
   overflow: hidden;
 }
 
+section {
+  overflow-y: auto;
+}
+
 :where(app-banner, header, nav, main, aside, footer) {
   border: solid 1px color-mix(in srgb, currentColor var(--45), transparent);
   border-radius: 0.3rem;
@@ -68,8 +72,4 @@ article {
 li {
   padding-inline: 1rem;
   padding-block: 0.5rem;
-}
-
-section {
-  overflow-y: auto;
 }
