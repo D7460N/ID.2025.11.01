@@ -9,9 +9,12 @@ https://codepen.io/dragontheory/pen/abeEEmz */
   display: grid;
   position: relative;
   min-height: 100vh;
-  max-width: 2fr;
   text-align: center;
   max-width: content;
+}
+
+.her svg {
+  max-width: 2fr;
 }
 
 .hero h1 {
