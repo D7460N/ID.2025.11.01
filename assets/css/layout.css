@@ -121,7 +121,7 @@ app-banner {
 
 nav {
   grid-auto-flow: column;
-  justify-content: space-evenly;
+  justify-content: start;
 
   [role="button"] {
     padding-inline: 1rem;
