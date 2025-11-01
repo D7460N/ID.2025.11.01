@@ -134,7 +134,6 @@ nav {
 
 article {
   grid-auto-flow: row;
-  height: 100dvh;
   align-content: start;
 }
 
