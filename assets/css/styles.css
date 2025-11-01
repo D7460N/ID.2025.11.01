@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+
+/* MARK: RESET
+*/
+:where(*, * *, *::before, *::after) {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  transition-property: var(--transition-property);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  transition-behavior: allow-discrete;
+
+  /* Accessibility feature */
+  @media (prefers-reduced-motion: reduce) {
+    transition-duration: 0ms;
+  }
+}
+
+:root {
+  color-scheme: light dark;
+  /* font: [font-style] [font-variant] [font-weight] [font-stretch] <font-size> [/ <line-height>] <font-family>; */
+  font: normal normal 100 1rem/1.5 Oxanium, sans-serif;
+
+  --transition-duration: 250ms;
+  --transition-property: visibility, opacity, display, transform, background,
+    background-color, border-color, color, width, height, min-width,
+    min-height border;
+  --transition-timing-function: ease-in;
+
+  scroll-behavior: smooth;
+
+  /* https://html-css-tip-of-the-week.netlify.app/tip/interpolate-size/
+  https://12daysofweb.dev/2024/calc-size-and-interpolate-size/ */
+  interpolate-size: allow-keywords;
+
+  --25: 25%;
+  --55: 55%;
+  --45: 45%;
+  --75: 75%;
+  --100: 100%;
+
+  accent-color: light-dark(#005a9c, #66ccff);
+}
+
+/* MARK: LAYOUT
+*/
+:where(app-container, app-banner, header, nav, main, article, section, ul, aside, footer) {
+  display: grid;
+}
+
+:where(html, body, app-container, main, article, section) {
+  overflow: hidden;
+}
+
+:where(app-banner, header, nav, main, aside, footer) {
+  border: solid 1px color-mix(in srgb, currentColor var(--45), transparent);
+  border-radius: 0.3rem;
+  margin-inline: 1rem;
+}
+
+:where(app-logo, user-name, h1, h2, p, li, powered-by, app-version) {
+  padding: 1rem;
+}
+
+app-container {
+  container-type: inline-size;
+  container-name: app-container;
+  gap: 1rem;
+  height: 100dvh;
+}
+
+app-banner {
+  justify-content: center;
+}
+
+header,
+footer {
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+app-banner {
+  grid-auto-flow: column;
+  color: color-mix(in srgb, currentColor var(--45), transparent);
+  font-size: 75%;
+
+  &:first-of-type {
+    margin-block-start: 1rem;
+  }
+
+  &:not(:first-of-type) {
+    margin-block-end: 1rem;
+  }
+}
+
+nav {
+  grid-auto-flow: column;
+  justify-content: space-evenly;
+
+  [role="button"] {
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+  }
+}
+
+article {
+  height: 100dvh;
+  align-content: start;
+}
+
+/* MARK: TECH CORNERS
+*/
+section [role="button"] {
+  display: grid;
+  justify-self: start;
+  border: solid 0.065rem color-mix(in srgb, currentColor var(--45), transparent);
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  margin: 1rem;
+  color: inherit;
+  background-color: transparent;
+  text-transform: uppercase;
+  mask: conic-gradient(currentColor 0 0) padding-box,
+    conic-gradient(at 0.5rem 0.5rem, transparent 75%, currentcolor 0%) 0 0 /
+      calc(100% - 0.5rem) calc(100% - 0.5rem) border-box;
+}
+
+[role="button"] {
+  cursor: pointer;
+  user-select: none;
+}
+
+li {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
+
+section {
+  overflow-y: auto;
+}
+
+/* MARK: SCROLLBARS
+*/
+section {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--accent2)) #0000;
+
+  transition: scrollbar-color 0.5s ease;
+
+  &:not(:hover) {
+    scrollbar-color: transparent #0000;
+  }
+}
+
+/* https://css-tricks.com/come-to-the-light-dark-side/ */
+/* MARK: FORMS
+*/
