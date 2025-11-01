@@ -30,7 +30,7 @@ This website eliminates runtime dependencies and avoids complex JavaScript-drive
 🔹 No dependencies: 100% browser-native<br>
 🔹 Dynamic JSON data via `fetch()`<br>
 🔹 Declarative single-page-application (SPA) navigation via `<input type="radio">` + CSS `:has()` + container queries<br>
-🔹 **Easily Overriden**: Minimal nesting, no IDs, classes, or custom attributes in markup, CSS Layers<br>
+🔹 **Easily Overridden**: Minimal nesting, no IDs, classes, or custom attributes in markup, CSS Layers<br>
 🔹 Component visibility logic (`:empty`, `:has`, `[hidden]`) based on data delivery **JavaScript CRUD**.<br>
 🔹 Clean separation of concerns: UI boolean logic, and JavaScript/API services.
 
