@@ -5,7 +5,8 @@
   body,
   app-container,
   main,
-  article
+  article,
+  section
 ) {
   overflow: hidden; /*
   - Ancestoral path from scrollable element to root enables closest context scrolling
