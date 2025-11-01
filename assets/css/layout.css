@@ -44,10 +44,10 @@
     display: none; /*
   - Hidden until they have content */
 
-    :not(:empty) {
-      display: grid;
-    }
+  &:not(:empty) {
+    display: grid;
   }
+}
 
 :where(
   app-banner,
