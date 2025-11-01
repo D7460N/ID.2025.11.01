@@ -28,72 +28,6 @@
   accent-color: light-dark(#005a9c, #66ccff);
 }
 
-/* MARK: LAYOUT
-*/
-:where(app-container, app-banner, header, nav, main, article, section, ul, aside, footer) {
-  display: grid;
-}
-
-:where(html, body, app-container, main, article, section) {
-  overflow: hidden;
-}
-
-:where(app-banner, header, nav, main, aside, footer) {
-  border: solid 1px color-mix(in srgb, currentColor var(--45), transparent);
-  border-radius: 0.3rem;
-  margin-inline: 1rem;
-}
-
-:where(app-logo, user-name, h1, h2, p, li, powered-by, app-version) {
-  padding: 1rem;
-}
-
-app-container {
-  container-type: inline-size;
-  container-name: app-container;
-  gap: 1rem;
-  height: 100dvh;
-}
-
-app-banner {
-  justify-content: center;
-}
-
-header,
-footer {
-  grid-auto-flow: column;
-  justify-content: space-between;
-}
-
-app-banner {
-  grid-auto-flow: column;
-  color: color-mix(in srgb, currentColor var(--45), transparent);
-  font-size: 75%;
-
-  &:first-of-type {
-    margin-block-start: 1rem;
-  }
-
-  &:not(:first-of-type) {
-    margin-block-end: 1rem;
-  }
-}
-
-nav {
-  grid-auto-flow: column;
-  justify-content: space-evenly;
-
-  [role="button"] {
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
-  }
-}
-
-article {
-  height: 100dvh;
-  align-content: start;
-}
-
 /* MARK: TECH CORNERS
 */
 section [role="button"] {
@@ -114,15 +48,6 @@ section [role="button"] {
 [role="button"] {
   cursor: pointer;
   user-select: none;
-}
-
-li {
-  padding-inline: 1rem;
-  padding-block: 0.5rem;
-}
-
-section {
-  overflow-y: auto;
 }
 
 /* MARK: SCROLLBARS
