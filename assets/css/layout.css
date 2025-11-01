@@ -123,7 +123,7 @@ app-banner {
 
 nav {
   grid-auto-flow: column;
-  justify-content: start;
+  justify-content: end;
   user-select: none;
 
   [role="button"] {
