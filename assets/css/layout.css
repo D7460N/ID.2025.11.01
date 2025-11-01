@@ -1,23 +1,5 @@
 /* MARK: LAYOUT
-
-NOTES:
-  overflow: hidden;
-    - Optional full screen/full bleed layouts
-    - Disables horizontal scrolling (enforces accessible wrapping)
-    - Enables closest context scrolling
-    - Eliminates unknown variables
-
-  Padding and Margin:
-    - Data elements/containers only. Such as <h1>, <p>, <label>, <input>, etc.
-    - Not for layout containers. Such as <html>, <body>, <header>, <main>, etc.
-    - Less complex for dynamic content
-    - Allows browsers intrinsic control of data elements along with infered grid layout 
 */
-
-:root {
-  
-}
-
 :where(
   html,
   body,
@@ -25,7 +7,13 @@ NOTES:
   main,
   article
 ) {
-  overflow: hidden;
+  overflow: hidden; /*
+  - Ancestoral path from scrollable element to root enables closest context scrolling
+  - Full Bleed layouts maximize possibilities
+  - Disables horizontal scrolling (enforces accessible wrapping)
+  - Eliminates most unknown variables
+  - Semanticly meaningful HTML elements only */
+
   position: relative;
 }
 
@@ -44,7 +32,9 @@ NOTES:
   aside,
   footer
 ) {
-  display: grid;
+  display: grid; /*
+  - Custom HTML elements allow for semantic meaning and selector grouping without adding markup
+  - Custom HTML elements may be expanded into registered web-components */
 }
 
 :where(
@@ -70,6 +60,13 @@ NOTES:
 }
 
 :where(
+/*
+Padding and Margin:
+  - Data elements/containers only. Such as <h1>, <p>, <label>, <input>, etc.
+  - Not for layout containers. Such as <html>, <body>, <header>, <main>, etc.
+  - Less complex for dynamic content
+  - Allows browsers intrinsic control of data elements along with infered grid layout
+*/  
   app-logo,
   user-name,
   h1,
