@@ -11,13 +11,12 @@ https://codepen.io/dragontheory/pen/abeEEmz */
   display: grid;
   place-items: center;
   overflow: hidden;
-}
 
-.hero-content {
   text-align: center;
   color: white;
   max-width: min(90vw, 80ch);
   padding: clamp(1rem, 5vw, 3rem);
+
 }
 
 .hero h1 {
@@ -35,18 +34,18 @@ https://codepen.io/dragontheory/pen/abeEEmz */
   opacity: 0.95;
 }
 
-.hero-content svg path {
+.hero svg path {
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 1.0));
 }
 
-.hero-actions {
+.hero {
   display: flex;
   flex-wrap: wrap;
   gap: clamp(0.75rem, 2vw, 1rem);
   justify-content: center;
 }
 
-.hero-actions button {
+.hero button {
   padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
   font-size: clamp(0.9rem, 2.5vw, 1rem);
   font-weight: 600;
