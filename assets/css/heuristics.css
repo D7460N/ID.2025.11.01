@@ -1,0 +1,7 @@
+/* MARK: HEURISTICS
+*/
+
+app-banner:empty,
+aside:empty {
+  display: grid:
+}
