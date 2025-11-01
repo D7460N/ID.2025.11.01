@@ -13,7 +13,7 @@ https://codepen.io/dragontheory/pen/abeEEmz */
   overflow: hidden;
 
   text-align: center;
-  color: white;
+  color: currentColor;
   max-width: min(90vw, 80ch);
   padding: clamp(1rem, 5vw, 3rem);
 }
@@ -50,7 +50,7 @@ https://codepen.io/dragontheory/pen/abeEEmz */
 
 .hero .btn-primary {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  color: currentColor;
   transform: translateY(0);
 }
 
@@ -65,17 +65,17 @@ https://codepen.io/dragontheory/pen/abeEEmz */
 }
 
 .hero .btn-secondary:hover {
-  background: white;
+  background: currentColor;
   transform: translateY(-1px);
 }
 
 .hero .btn-outline {
   background: transparent;
-  color: white;
+  color: currentColor;
   border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .hero .btn-outline:hover {
   background: rgba(255, 255, 255, 0.1);
-  border-color: white;
+  border-color: currentColor;
 }
