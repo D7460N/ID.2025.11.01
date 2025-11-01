@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
 
-/* MARK: RESET
-*/
-:where(*, * *, *::before, *::after) {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 :root {
   color-scheme: light dark;
   /* font: [font-style] [font-variant] [font-weight] [font-stretch] <font-size> [/ <line-height>] <font-family>; */
