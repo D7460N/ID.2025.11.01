@@ -55,10 +55,13 @@ DONE!
 
 ## 📂 STRUCTURE
 
-| Directory       | Purpose                                       |
-| --------------- | --------------------------------------------- |
-| `/assets/css/`  | CSS layers for layout, typography, heuristics |
-| `index.html`    | Main application entry point                  |
+| File/Directory       | Purpose                                       |
+| -------------------- | --------------------------------------------- |
+| `index.html`         | Main application entry point                  |
+| `/assets/css/`       | CSS layers for layout, typography, heuristics |
+| `CODE_OF_CONDUCT.md` | Community guidelines and code of conduct      |
+| `LICENSE`            | MIT License                                   |
+| `SECURITY.md`        | Security policy and vulnerability reporting   |
 
 <br>
 
