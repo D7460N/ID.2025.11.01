@@ -1,0 +1,12 @@
+/* MARK: SCROLLBARS
+*/
+section {
+  scrollbar-width: thin;
+  scrollbar-color: var(k;
+
+  transition: scrollbar-color 0.5s ease;
+
+  &:not(:hover) {
+    scrollbar-color: transparent #0000;
+  }
+}
