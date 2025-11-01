@@ -16,7 +16,6 @@ https://codepen.io/dragontheory/pen/abeEEmz */
   color: white;
   max-width: min(90vw, 80ch);
   padding: clamp(1rem, 5vw, 3rem);
-
 }
 
 .hero h1 {
@@ -36,13 +35,6 @@ https://codepen.io/dragontheory/pen/abeEEmz */
 
 .hero svg path {
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 1.0));
-}
-
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(0.75rem, 2vw, 1rem);
-  justify-content: center;
 }
 
 .hero button {
