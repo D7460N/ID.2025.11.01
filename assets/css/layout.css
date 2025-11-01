@@ -33,6 +33,7 @@
   footer
 ) {
   display: grid; /*
+  - Implicit grid columns/rows are added/removed auto-magically when dynamic data elements are added/removed 
   - Custom HTML elements allow for semantic meaning and selector grouping without adding markup
   - Custom HTML elements may be expanded into registered web-components */
 }
