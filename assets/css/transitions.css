@@ -1,0 +1,24 @@
+/* MARK: TRANSITIONS
+*/
+
+:root {
+  --transition-duration: 250ms;
+  --transition-property: visibility, opacity, display, transform, background, background-color, border-color, color, width, height, min-width, min-height, scrollbar-color, border;
+  --transition-timing-function: ease-in;
+
+  /* https://html-css-tip-of-the-week.netlify.app/tip/interpolate-size/
+  https://12daysofweb.dev/2024/calc-size-and-interpolate-size/ */
+  interpolate-size: allow-keywords;
+}
+
+:where(*, * *, *::before, *::after) {
+  transition-property: var(--transition-property);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  transition-behavior: allow-discrete;
+
+  /* Accessibility feature */
+  @media (prefers-reduced-motion: reduce) {
+    transition-duration: 0ms;
+  }
+}
