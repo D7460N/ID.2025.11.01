@@ -38,8 +38,7 @@
 
 :where(
   app-banner,
-  aside,
-  ul
+  aside
   ) {
     display: none; /*
   - Hidden until they have content */
