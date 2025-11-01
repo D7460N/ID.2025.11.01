@@ -19,17 +19,14 @@
 
 :where(
   app-container,
-  app-banner,
   header,
   nav,
   main,
   article,
   section,
-  ul,
   li,
   form,
   legend,
-  aside,
   footer
 ) {
   display: grid; /*
@@ -38,6 +35,19 @@
   - Custom HTML elements allow for semantic meaning and selector grouping without adding markup
   - Custom HTML elements may be expanded into registered web-components */
 }
+
+:where(
+  app-banner,
+  aside,
+  ul
+  ) {
+    display: none; /*
+  - Hidden until they have content */
+
+    :not(:empty) {
+      display: grid;
+    }
+  }
 
 :where(
   app-banner,
