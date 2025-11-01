@@ -126,7 +126,7 @@ nav {
   justify-content: start;
   user-select: none;
 
-  &[role="button"] {
+  [role="button"] {
     padding-inline: 1rem;
     padding-block: 0.5rem;
   }
